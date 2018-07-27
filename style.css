@@ -1,4 +1,18 @@
 img {
-    max-height: none;
+    max-height: 500px;
     width: 100%;
+}
+
+.content {
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.mycontent-box {
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 20%;
 }
