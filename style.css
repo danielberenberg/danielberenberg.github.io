@@ -1,6 +1,7 @@
 img {
     max-height: 500px;
     width: 100%;
+    border-radius: 6px;
 }
 
 .content {
@@ -13,6 +14,10 @@ img {
 .mycontent-box {
     background-color: black;
     opacity: 0.5;
-    position: absolute;
-    bottom: 20%;
+    position: relative;
+    bottom: 80%;
+    width: 66%;
+    margin: 0 auto;
+    height: 44%;
+    border-radius: 6px;
 }
