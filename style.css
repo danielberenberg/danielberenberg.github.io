@@ -22,3 +22,8 @@
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
+img {
+    max-height: 600px;
+
+}
