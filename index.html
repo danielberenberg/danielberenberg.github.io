@@ -1,76 +1,150 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>dberenberg</title> 
-        <meta charset="utf-8"/>
+<html lang="en">
+
+  <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="daniel berenberg">
+
+        <title>Daniel Berenberg - Website</title>
+
+        <!-- Custom styles for this template -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark" id="nav_">
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active unlocked">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Projects</a>
-                        </li>
-                        <a class="btn btn-outline-success radiates last" type="button" href="assets/daniel-berenberg-resume.pdf" download>Resume</a>
+        <link href="css/scrolling-nav.css" rel="stylesheet">
 
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <div class="content">
-            <h1>Daniel Berenberg</h1>
-            <div class="row"> 
-                <div class="col-md-8">
-                    <div id="carouselPages" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselPages" data-slide-to="0" class="active carousel-ind"></li>
-                            <li data-target="#carouselPages" data-slide-to="1" class="carousel-ind"></li>
-                            <li data-target="#carouselPages" data-slide-to="2" class="carousel-ind"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="assets/imgs/mountains.jpg">
-                                <div class="text-holder" align="center";> 
-                                    <p style="text-align:center;">Lorem Ipsum</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/imgs/sunset.jpg">
-                                <div class="text-holder" align="center";> 
-                                    <p style="text-align:center;">Lorem Ipsum</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/imgs/topofworld.jpg">
-                                <div class="text-holder" align="center";> 
-                                    <p style="text-align:center;">Lorem Ipsum</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <a class="carousel-control-prev arrow" href="#carouselPages" role="button" data-slide="prev">
-                        &#10094;
-                        </a>
-                        <a class="carousel-control-next arrow" href="#carouselPages" role="button" data-slide="next">
-                        &#10095;
-                        </a> -->
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <img src="assets/imgs/me_hiking.jpg">
-                </div>
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">DJB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#pubs">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+            <a class="btn btn-outline-success radiates last" type="button" href="assets/daniel-berenberg-resume.pdf" download>Resume</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>Daniel Berenberg's Personal Site</h1>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2>About me</h2>
+                <p class="lead">
+                My name is Daniel Berenberg. I am a 23 year old graduate student pursuing an M.S in Computer Science at the University of Vermont. 
+                <p class="lead">My academics focus on complex systems and data science: applying artificial intelligence and network analytics to deep and fascinating problems in both the text and image domains. 
+                </p>
+                <p>My academic advisor is <a href="http://www.bagrow.com/">Dr. James Bagrow</a>. We mine large textual datasets called human knowledge graphs and use state of the art computational linguistics theory and tools to research complex interactions such as causal relationships. 
+                </p>
+                <p>I enjoy implementing high performance scientific computing software and integrating cloud GPU and cluster services to build robust and efficient data analytics algorithms as well as computation.</p>
+                <p>Outside of my work, I can be found running, hiking, skateboarding, or climbing.</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="assets/imgs/me_hiking.jpg">
             </div>
         </div>
-    </body>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Projects</h2>
+            <p class="lead">Some selected projects that I have either completed or are currently underway.</p>
+            <ul style="list-style-type:none;">
+                <li>
+                    <h3>
+                        <a href="https://github.com/abarson/WePanic-DL">WePanic</a>
+                    </h3>
+                    <p>Building a deep learning system to predict user heart rate and respiratory rate from a smart phone video with super human accuracy. Implementing 3D convolutional architectures and video processing algorithms with various Python scienctific computing libraries such as <b>scipy</b>, <b>numpy</b>, <b>opencv</b>, and <b>Keras</b></p>.
+                </li>
+                <li>
+                    <h3>
+                        <a href="https://github.com/danielberenberg/graphpp">Graph++</a>
+                    </h3>
+                    <p>A C++ implementation of generalized network algorithms. Developed for a Spring 2018 course called Algorithms for Complex Networks. Efficiently implemented a suite of network analysis tools for large networks.</p>
+                </li>
+                <li>
+                    <h3>
+                        <a href="https://github.com/danielberenberg/ANNsteroidsReLoaded">Playing Asteroids with Deep Reinforcement Learning</a>
+                    </h3>
+                    <p>Third place recipient in UVM 2017 Computer Science fair. Implemented an artificially intelligent reinforcement learning agent that and trained it to play a reduced difficulty version of a homebrewed version of the classic <a href="https://en.wikipedia.org/wiki/Asteroids_(video_game">Asteroids</a> game. Asteroids game was implemented in C++, AI system was implemented using Tensorflow and other selected python libraries. Final DNN architecture was a modified double dueling Deep Q-Network, a tested convolutional architecture that uses the <a href="https://en.wikipedia.org/wiki/Q-learning">Q-learning algorithm</a>.</p>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="pubs">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Publications</h2>
+            <ol>
+                <li><p><a href="https://arxiv.org/abs/1805.06879">Neural language representations predict outcomes of scientific research</a><br/>J.P. Bagrow, D. Berenberg, J. Bongard, Preprint (2018)
+                </p></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Contact me</h2>
+            <p>I am currently living in Burlington, VT. I can be contacted by e-mail at <a href="mailto:djberenb@uvm.edu">djberenb@uvm.edu</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Daniel Berenberg 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+
+  </body>
+
 </html>
