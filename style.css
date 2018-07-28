@@ -1,7 +1,7 @@
 img {
     max-height: 355px;
     width: 100%;
-    border-radius: 6px;
+    border-radius: 10px;
     padding-top: 10px;
 }
 
@@ -10,7 +10,7 @@ img.background-im {
 }
 
 html, .col-md-8, .col-md-4, .content, header{
-    background-color: #696A67;
+    background-color: #324851;
 }
 
     
@@ -65,39 +65,48 @@ html, .col-md-8, .col-md-4, .content, header{
 }
 
 .carousel-indicators .active {
-    color: #111212;
-    opacity: 0.5;
-    background-color: black;
+    color: #324851;
+    opacity: 1;
+    background-color: #324851;
 }
 
 .carousel-indicators li {
-    background-color: #f5aba3;
+    background-color: #86AC41;
 }
 
 header { 
     padding-left: 25px; padding-right: 25px; 
 }
 
-ul.nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+
+.text-holder {
+    position:absolute;
+    bottom:70%;
+    width:100%;
+    border: 2px solid black;
 }
 
-li.nav {
-    float: left;
+#navbarNav, #nav_ {
+    background-color: #34675C;
+    border-radius: 12px;
 }
 
-li.nav a {
-    display: block;
-    color: white;
+.unlocked:hover{
+    background-color:#7DA3A1;
+    border-radius: 15px;
+}
+
+.unlocked {
+    transition: background-color 0.5s ease;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.radiates:hover{
+    border-radius: 15px;
+}
+
+.content > h1 {
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li.nav a:hover {
-    background-color: #111;
+    width:100%;
 }
