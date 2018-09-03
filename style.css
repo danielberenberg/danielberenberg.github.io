@@ -9,10 +9,6 @@ img.background-im {
     opacity: 0.5;
 }
 
-html, .col-md-8, .col-md-4, .content, header{
-    background-color: #324851;
-}
-
     
 .content {
     margin: 0 auto;
