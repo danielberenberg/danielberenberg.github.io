@@ -113,6 +113,26 @@ header {
 }
 
 .row {
-    border-top: 2px solid rgba(1, 1, 1, 0.2);
     padding-top: 15px;
+}
+
+.showContent {
+    line-height: 1em;
+    height: auto;
+}
+
+.hideContent {
+    overflow: hidden;
+    line-height: 1em;
+    height: 2em;
+}
+
+.show-more {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#center-btn {
+    display: flex;
+    justify-content: center;
 }

@@ -16,7 +16,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="css/scrolling-nav.css" rel="stylesheet">
-
   </head>
 
   <body id="page-top">
@@ -87,51 +86,60 @@
       <div class="container">
         <h2 style="text-align:left; border-top: 2px solid rgba(1,1,1,0.2);">Projects</h2>
             <p class="lead">For my full list of projects, please visit my 
-            <a href="https://github.com/danielberenberg">github</a> page.
-          <div class="row" style="border-top:none;">
-            <div class="col-md-8">
-                <li>
-                    <h3>
-                        <a href="https://github.com/abarson/WePanic-DL">WePanic</a> (Spring/Summer 2018)
-                    </h3>
-                    <ul>
-                    <li style="text-align:left;">Successfully constructed a deep learning system capable of predicting human heart rate and respiratory rate from a smart phone video.</li>
-                    <li>Implemented advanced video manipulation software using Python libraries such as OpenCV, PIL, numpy, and scipy.</li>
-                    <li>Developed and tested neural networks using Keras and Tensorflow.</li>
-                    <li>Publication in progress and TBA. </li>
-                    </ul>
-                </li>
-                <p>This project was intriguing for several reasons. The task alone deviates from the similar and widely researched <a href="https://en.wikipedia.org/wiki/Activity_recognition">action recognition</a> problem, not only because we must predict values from a continuous domain, but due to the shifted focus in spatiotemporal feature learning. <br/><br/> 
-                Traditionally, action recognition tends to lean on the spatial side, processing small chunks of a frame sequence at a time in order to build a general understanding. Here, succesful completion of the task requires the network to learn to recognize sequence data as a frequency, meaning larger frame sequences should be fed in, however the spatial information within a single frame of the sequence is relatively unimportant and can be downsampled.
-                <br/><br/>
-                Another interesting element of the project is the data itself. Though various standardization steps were taken, this data could be accurately classified as "extremely noisy". Not only were videos ranging in film quality, but label submissions (HR and RR) were problematic. Each subject was tasked with recording their own 30 second video and counting their heart rate and respiratory rate with the aid of a partner. This process understandably may introduce errors such as human counting inaccuracies, poor filming conditions, and timing errors. A timing error comes from the subject recording a video for longer or shorter than 30 seconds, but computing their breaths/beats on a minute basis. 
-                <br/><br/>
-                Finally, each subtask is uniquely understood by the neural network. In heart rate prediction, the network must learn to count beat frequencies across a specified time domain (in this case 6 seconds) and apply a simple transformation to its count (multiplication by 10, maybe) to reach a prediction. Respiratory rates are a bit more complicated. Not only must the network learn to count beat frequency, but it must also learn the complex, weakly linear relationship between the two labels. 
-                </p>
-            </div>
-            <div class="col-md-4">
-                <figure>
-                  <img src="assets/wp_demo.gif">
-                  <figcaption style="font-size:10pt;">
-                    <i style="font-size: 10.5pt">High performance neural network predictions across an entire video stream.</i>
-                     <br/><i>Top Left</i>: Predictions and error rates. 
-                     <br/><i>Bottom Right:</i> Processed input to the neural network. 
-                     <br/><i>Background:</i> Originally recorded iPhone video.
-                     <br/>
-                     <br/>The actual value of subject's heart rate and respiratory rate are left static as they were directly submitted from the subject.
-                  </figcaption>
-                </figure>
+            <a href="https://github.com/danielberenberg">github</a> page.</p>
+          <div class="row">
+             <div class="col-md-8">
+               <div class="container">
+                   <li>
+                       <h3>
+                           <a href="https://github.com/abarson/WePanic-DL">WePanic</a> (Spring/Summer 2018)
+                       </h3>
+                       <ul>
+                       <li style="text-align:left;">Successfully constructed a deep learning system capable of predicting human heart rate and respiratory rate from a smart phone video.</li>
+                       <li>Implemented advanced video manipulation software using Python libraries such as OpenCV, PIL, numpy, and scipy.</li>
+                       <li>Developed and tested neural networks using Keras and Tensorflow.</li>
+                       <li>Publication in progress and TBA. </li>
+                       </ul>
+                   </li>
+               </div>
+               <div class="container-fluid">
+                   <div class="collapse multi-collapse" id="collapseExample">
+                     <div class="card card-body">
+                       <p>The task alone deviates from the similar and widely researched <a href="https://en.wikipedia.org/wiki/Activity_recognition">action recognition</a> problem, not only because we must predict values from a continuous domain, but due to the shifted focus in spatiotemporal feature learning. <br/><br/> 
+                       Traditionally, action recognition tends to lean on the spatial side, processing small chunks of a frame sequence at a time in order to build a general understanding. Here, succesful completion of the task requires the network to learn to recognize sequence data as a frequency, meaning larger frame sequences should be fed in, however the spatial information within a single frame of the sequence is relatively unimportant and can be downsampled.
+                       <br/><br/>
+                       Another interesting element of the project is the data itself. Though various standardization steps were taken, this data could be accurately classified as "extremely noisy". Not only were videos ranging in film quality, but label submissions (HR and RR) were problematic. Each subject was tasked with recording their own 30 second video and counting their heart rate and respiratory rate with the aid of a partner. This process understandably may introduce errors such as human counting inaccuracies, poor filming conditions, and timing errors. A timing error comes from the subject recording a video for longer or shorter than 30 seconds, but computing their breaths/beats on a minute basis. 
+                       <br/><br/>
+                       Finally, each subtask is uniquely understood by the neural network. In heart rate prediction, the network must learn to count beat frequencies across a specified time domain (in this case 6 seconds) and apply a simple transformation to its count (multiplication by 10, maybe) to reach a prediction. Respiratory rates are a bit more complicated. Not only must the network learn to count beat frequency, but it must also learn the complex, weakly linear relationship between the two labels. 
+                       </p>
+                     </div>
+                   </div>
+                   <br/>
+                   <div id="center-btn">
+                       <button class="btn btn-info" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseExample">info</button></div>
+               </div>
+             </div>
 
-                <figure>
-                  <img src="assets/imgs/dataset.jpg">
-                  <figcaption style="font-size:10pt;">
-                    <i style="font-size: 10.5pt">Label set distribution and structure.</i>
-                     <br/><b>A</b> Dataset spread, each subject submits their heart rate and respiratory rate for their video submission. 
-                     <br/><b>B</b> Violin plots showing the distribution of each label, noting the skew in respiratory rate specifically.
-                  </figcaption>
-                </figure>
-            </div>
-           </div>
+            <div class="col-md-4" style="border-top:none;">
+                <img src="assets/wp_demo.gif">
+                 <p style="font-size:10pt;" class="collapse multi-collapse">
+                   <i style="font-size: 10.5pt">High performance neural network predictions across an entire video stream.</i>
+                    <br/><i>Top Left</i>: Predictions and error rates. 
+                    <br/><i>Bottom Right:</i> Processed input to the neural network. 
+                    <br/><i>Background:</i> Originally recorded iPhone video.
+                    <br/>
+                    <br/>The actual value of subject's heart rate and respiratory rate are left static as they were directly submitted from the subject.
+                </p>
+               <figure class="collapse multi-collapse">
+                 <img src="assets/imgs/dataset.jpg">
+                 <figcaption style="font-size:10pt;">
+                   <i style="font-size: 10.5pt">Label set distribution and structure.</i>
+                    <br/><b>A</b> Dataset spread, each subject submits their heart rate and respiratory rate for their video submission. 
+                    <br/><b>B</b> Violin plots showing the distribution of each label, noting the skew in respiratory rate specifically.
+                 </figcaption>
+               </figure>
+             </div>
+          </div>
         <div class="row" >
           <div class="col-lg-8 mx-auto">
             </p>
