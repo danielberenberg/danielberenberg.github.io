@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8" />
-<title>map-filter-reduce</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<head><meta charset="utf-8" />
+<title>map-filter-reduce</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -12078,7 +12076,7 @@ bernoulli_traditional(0.03) = 0; bernoulli_lambda(0.03) = 0
 <span class="n">map_cf</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">bernoulli_lambda</span><span class="p">(</span><span class="n">p</span><span class="p">)),</span> <span class="n">P</span><span class="p">)</span>
 
 <span class="n">fmt</span> <span class="o">=</span> <span class="s2">&quot;bernoulli(</span><span class="si">{:0.2f}</span><span class="s2">) = </span><span class="si">{}</span><span class="s2">&quot;</span>                            <span class="c1"># a format string</span>
-<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">tup</span><span class="p">:</span> <span class="n">fmt</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">tup</span><span class="p">),</span><span class="n">map_cf</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># format the outputs of pmap and print each line</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">tup</span><span class="p">:</span> <span class="n">fmt</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">tup</span><span class="p">),</span><span class="n">map_cf</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># format the outputs of map_f and print each line</span>
 </pre></div>
 
 </div>
@@ -12121,7 +12119,7 @@ bernoulli(0.03) = 0
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="filter">filter<a class="anchor-link" href="#filter">&#182;</a></h1><p><code>filter</code>, like <code>map</code>, applies a function $f$ to an iterable say $L$. For a given element of $\ell \in L$, <code>filter</code> expects $f(\ell)$ to be some boolean <code>true</code> or <code>false</code>. Similar to <code>map</code>, the output of <code>filter</code> is a <code>filter</code> object that will yield the elements $\ell_{i} \in L$ for which $f(\ell_{i})=$ <code>false</code>.</p>
+<h1 id="filter">filter<a class="anchor-link" href="#filter">&#182;</a></h1><p><code>filter</code>, like <code>map</code>, applies a function $f$ to an iterable say $L$. For a given element of $\ell \in L$, <code>filter</code> expects $f(\ell)$ to be some boolean <code>true</code> or <code>false</code>. Similar to <code>map</code>, the output of <code>filter</code> is a <code>filter</code> object that will yield the elements $\ell_{i} \in L$ for which $f(\ell_{i})=$<code>true</code>.</p>
 
 </div>
 </div>
@@ -12252,6 +12250,7 @@ code.</p>
 <span class="sd">            :ValueError</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">flagged_credentials</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modifiable</span> <span class="o">=</span> <span class="mi">2</span>
         
         <span class="k">if</span> <span class="n">disallow_extension</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">disallow_extension</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
@@ -12267,8 +12266,7 @@ code.</p>
             <span class="bp">self</span><span class="o">.</span><span class="n">logfile</span> <span class="o">=</span> <span class="s1">&#39;stdout&#39;</span>
         <span class="k">elif</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">logfile</span><span class="p">)):</span>
             <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t write to </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">logfile</span><span class="p">))</span>
-        
-
+                
     <span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;[!!] Detected disallowed characters: (</span><span class="si">{0}</span><span class="s2">, </span><span class="si">{1}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">logfile</span> <span class="o">==</span> <span class="s1">&#39;stdout&#39;</span><span class="p">:</span>
@@ -12345,7 +12343,7 @@ code.</p>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_credentials</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="p">:</span><span class="s2">&quot;DROP TABLE employees;&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;getH4cked!!&quot;</span><span class="p">}</span>  <span class="c1"># input arguments</span>
 <span class="n">sanitizer</span> <span class="o">=</span> <span class="n">ArgumentSanitizer</span><span class="p">(</span><span class="n">logfile</span><span class="o">=</span><span class="s1">&#39;stdout&#39;</span><span class="p">,</span><span class="o">**</span><span class="n">user_credentials</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[--] sanitized output:&quot;</span><span class="p">,</span> <span class="n">sanitizer</span><span class="o">.</span><span class="n">sanitize</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[--] sanitized output:&quot;</span><span class="p">,</span> <span class="n">sanitizer</span><span class="o">.</span><span class="n">sanitize</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[--] marked malicious:&quot;</span><span class="p">,</span> <span class="n">sanitizer</span><span class="o">.</span><span class="n">flagged_credentials</span><span class="p">)</span>
 </pre></div>
 
@@ -12361,9 +12359,8 @@ code.</p>
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[!!] Detected disallowed characters: (username, DROP TABLE employees;)
-[--] sanitized output: {&#39;password&#39;: &#39;getH4cked!!&#39;}
-[--] marked malicious: {(&#39;username&#39;, &#39;DROP TABLE employees;&#39;)}
+<pre>[--] sanitized output: &lt;bound method ArgumentSanitizer.sanitize of &lt;__main__.ArgumentSanitizer object at 0x106e434e0&gt;&gt;
+[--] marked malicious: set()
 </pre>
 </div>
 </div>
