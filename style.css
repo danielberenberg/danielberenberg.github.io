@@ -136,3 +136,17 @@ header {
     display: flex;
     justify-content: center;
 }
+
+.btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#mybtn {
+    width:85%;
+}
+
+#mybtn2 {
+    width:55%;
+}

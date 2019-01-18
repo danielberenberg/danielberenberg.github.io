@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content=""/>
+<meta name="author" content="daniel berenberg"/>
 
-  <head>
+<title>Daniel Berenberg - Website</title>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content=""/>
-        <meta name="author" content="daniel berenberg"/>
-
-        <title>Dan Berenberg - Website</title>
-
-        <!-- Custom styles for this template -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="css/scrolling-nav.css" rel="stylesheet">
-  </head>
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="css/scrolling-nav.css" rel="stylesheet">
+</head>
     
   <!-- ######################## NAVBAR ####################### -->
   <body id="page-top">
@@ -57,7 +55,7 @@
     </nav>
     <header class="bg-primary text-white">
       <div class="container text-center">
-        <h1>Dan Berenberg</h1>
+        <h1>Daniel Berenberg</h1>
       </div>
     </header>
     <!-- ############ ABOUT ####################### -->
@@ -67,19 +65,21 @@
             <div class="col-lg-8">
                 <h2>About me</h2>
                 <p class="lead">
-                My name is Dan Berenberg. 
-                I am a recent Computer Science M.S. graduate student from the University of Vermont 
-                trained in machine learning and data science.                 
+                My name is Daniel Berenberg. 
+                I recently graduated with an M.S in Computer Science from the University of Vermont
+                with expertise in machine learning, data science, and complex networks.                 
                 </p>
                 <p>
-                I have a broad spectrum of interests from applied mathematics and scientific computing 
-                to programming language design and cybersecurity and operating systems development.
+                I have a broad spectrum of interests from applied mathematics, scientific computing,
+                and artificial intelligence
+                to programming language design, cybersecurity, and operating systems development.
                 I am actively seeking employment in data science related engineering/analytics roles 
                 and will take virtually any location into consideration. 
                 </p>
                 <p>My academic advisor was <a href="http://www.bagrow.com/">Dr. James Bagrow</a>. 
                 We mined large textual datasets called human knowledge graphs and used state-of-the-art computational tools 
-                combined with natural language processing and network science to research complex interactions such as causal relationships. 
+                combined with natural language processing and network science to research 
+                complex interactions such as causal relationships. 
                 </p>
                 <p>I am also a collaborator with VAiL, the Vermont Artificial Intelligence Laboratory, 
                 directed by <a href="https://www.uvm.edu/cems/cs/profiles/safwan-wshah">Dr. Safwan Wshah</a>. 
@@ -99,25 +99,110 @@
         <h2 style="text-align:left; border-top: 2px solid rgba(1,1,1,0.2);">Featured Projects</h2>
             <p class="lead">Research projects I have recently worked on. 
           <div class="row">
-             <div class="col-md-12">
+             <div class="col-md-8">
                <div class="container">
                    <li>
                        <h3>
-                            <a href="https://arxiv.org/abs/1810.03163">Network fusion and causal characterization </a> (Summer/Fall 2018)
+                            <a href="https://arxiv.org/abs/1810.03163">
+                                Network fusion and causal characterization </a>
+                             (Fall 2018)
                        </h3>
-                   </li>
                    <ul>
-                       <li>More info coming soon</li>
+                       <li>Created NetFUSES, a novel algorithm for <b>graph fusion</b>, the notion of performing
+                       an alignment across multiple networks when node identities are ambiguous.</li>
+                       <li>Analyzed causal interactions derived from large knowledge corpora
+                       including English Wikidata and ConceptNet.</li>
                    </ul>
+                </li>
               </div>
+             </div>
+            <div class="col-md-4">
+                <img src="assets/imgs/wk_est.png">
             </div>
-          </div>
+         <div class="row">
+               <div class="container-fluid">
+                   <div class="collapse multi-collapse" id="collapseExample">
+                     <div class="card card-body">
+                        <p>
+                        In this project, we study and attempt to join distinct datasets of causal relationships, each
+                        derived from various sources including knowledge graphs and crowdsourcing experiments.
+                        </p>
+                        <p>
+                        Causality is extremely difficult identify in raw text on the computer for a host of reasons,
+                        particularly due to the fact that causal relationships in this context 
+                        are not verifiably true, but instead causal attributions submitted and supported by real people. 
+                        For this reason, causal attributional relationships can be considered "noisy", inexact, 
+                        and perhaps even false. 
+                        </p>
+                        <p>
+                        In addition to the natural language and human error noise in causal attribution, 
+                        causal relationships can be expressed in semantically identical yet
+                        lexically dissimilar ways. For example, we can express two approximately 
+                        semantically equivalent causal statemenets:<br/>
+                        <div align="center">
+                            <q>Rain</q> <i>causes</i> <q>Wet</q>
+                            <br/>and<br/>
+                            <q>Torrential Downpour</q> <i>causes</i> <q>Completely Soaked</q>
+                        </div><br/>
+                        While these statements may literally carry different meanings, in terms of causal attribution
+                        we consider these statements to be synonymous.
+                        In our study, we find thate each dataset not only contains distinct causal interactions
+                        centered around the same concept (shown right), but that each knowledge graph  
+                        is rife with semantically identical, lexically distinct relationships.
+                        </p>
+                        <div align="center">
+                            <div class="col-md-10">
+                                <figure class="collapse multi-collapse">
+                                <img src="assets/imgs/cartoon.png">
+                                <figcaption style="font-size:10pt;">
+                                <i>Anecdotal example of dataset differences.</i><br/>
+                                Here we see that the center node <q><b>anxiety</b></q> exhibits unique
+                                structural characteristics and semantic relationships across each dataset.
+                                </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                   </div>
+                   <br/>
+                   <p>
+                    Much of the project is an attempt to fuse Wikidata and ConceptNet together in order to 
+                    create a larget causal attribution knowledge base. 
+                    This is acheived by using NetFUSES an algorithm for determining semantically 
+                    equivalent nodes both across the two networks and internally. NetFUSES
+                    utilizes a natural language processing tool called 
+                    <a href="https://en.wikipedia.org/wiki/Sentence_embedding">Sentence embeddings</a>,
+                    a method for mapping raw text into a high dimensional vector space where mathematical operations
+                    on text become meaningful. In particular, we can measure the <b>similarity</b> between
+                    two multiword expressions (such as <b>torrential downpour</b> and <b>rain</b>)
+                    in order to fuse two semantically equivalent nodes.
+                   </p>
+                   <p>
+                    After fusing the networks together, we perform a capture-recpature estimate to
+                    infer the size of the <i>latent causal attribution network</i>. 
+                    The latent causal attribution network is defined as the total causal attribution knowledge
+                    base for the human population. 
+                    Capture-recapture estimators are statistical techniques to infert the size of a population
+                    given several samples of that population. 
+                    In this case, our target population is the node set of the latent causal network
+                    and the samples are Wikidata and Conceptnet. 
+                    The fused graph I described earlier is
+                    used to estimate the total overlap across the networks, a necessary metric for
+                    the statistical estimators. 
+                   </p>
+                   <p>
+                   Using these estimators, we were able to arrive at a numerical result and estimate for the number
+                   of nodes and number of edges in the latent causal attribution graph as shown in the top image.
+                   </p>
+               </div>
+               <button class="btn btn-warning" type="button" id="mybtn2"
+                   data-toggle="collapse" data-target=".multi-collapse" 
+                   aria-expanded="false" aria-controls="collapseExample">more info</button>
           <div class="row">
              <div class="col-md-8">
                <div class="container">
                    <li>
                        <h3>
-                           <a href="https://github.com/abarson/WePanic-DL">WePanic</a> (Spring/Summer 2018)
+                           <a href="https://github.com/abarson/WePanic-DL">WePanic</a> (Summer 2018)
                        </h3>
                        <ul>
                        <li style="text-align:left;">Successfully constructed a deep learning system capable of 
@@ -159,9 +244,9 @@
                    </div>
                    <br/>
                    <div id="left-btn">
-                       <button class="btn btn-warning" type="button" 
+                       <button class="btn btn-warning" type="button" id="mybtn"
                            data-toggle="collapse" data-target=".multi-collapse" 
-                           aria-expanded="false" aria-controls="collapseExample">info</button>
+                           aria-expanded="false" aria-controls="collapseExample">more info</button>
                    </div>
                </div>
              </div>
@@ -191,12 +276,14 @@
                <div class="container">
                    <li>
                        <h3>
-                            <a href="https://arxiv.org/abs/1805.06879">Correlation prediction</a> (Summer 2018)
+                            <a href="https://arxiv.org/abs/1805.06879">Correlation prediction</a> (Spring 2018)
                        </h3>
                    </li>
+                   <!--
                    <ul>
                        <li>More info coming soon</li>
                    </ul>
+                   -->
               </div>
           </div>
           </div>
@@ -207,10 +294,12 @@
                        <h3>
                             <a href="https://arxiv.org/abs/1810.03163">IPR Algorithm</a> (Spring 2018)
                        </h3>
-                   </li>
+                  </li>
+                  <!--
                    <ul>
                        <li>More info coming soon</li>
                    </ul>
+                  -->
               </div>
           </div>
     </section>
@@ -227,10 +316,15 @@
             </div>
             <div class="col-md-8">
                 <br/>
-                <p style="font-size: 18px;">Here I discuss functional approaches to computation in Python. i
-                I show the power and usage of anonymous functions, describe use cases for the map, filter, and reduce keywords and provide
-                a host of other pieces of advice in regards to writing clear, concise, and effective Python code. 
-                <br/><br/>This blog assumes that the reader is a novice to intermediate Python programmer. </p>
+                <p style="font-size: 18px;">
+                Here I discuss functional approaches to computation in Python. i
+                I show the power and usage of anonymous functions, describe use cases for 
+                the map, filter, and reduce keywords and provide
+                a host of other pieces of advice in regards to writing clear, concise, 
+                and effective Python code. 
+                <br/><br/>
+                This blog assumes that the reader is a novice to intermediate Python programmer.
+                </p>
             </div>
         </a>
 
@@ -241,7 +335,14 @@
             </div>
             <div class="col-md-8">
                 <br/>
-                <p style="font-size: 18px;">These were some slides used to describe a model that investigates the interactions between fast and slow vehicles on a 2D-grid system. This model is a cellular automata, a model characterized by locally defined rules for entities to interact oftentimes on a lattice such as a square grid. Cellular Automata exhibit macro behavior and interesting patterns on a global scale due to local interactions.</p>
+                <p style="font-size: 18px;">
+                These were some slides used to describe a model that investigates the
+                interactions between fast and slow vehicles on a 2D-grid system. 
+                This model is a cellular automata, a model characterized by locally 
+                defined rules for entities to interact oftentimes on a lattice such as a 
+                square grid. 
+                Cellular Automata exhibit macro behavior and interesting patterns on a 
+                global scale due to local interactions.</p>
             </div>
         </a>
     <br/>
@@ -254,8 +355,9 @@
         <h2 style="text-align:left; border-top: 2px solid rgba(1,1,1,0.2);">Contact</h2>
         <div class="row" style="border-top:none;">
           <div class="col-lg-8 mx-auto">
-              <p>I am currently living in Burlington, VT. I can be contacted by e-mail at <a href="mailto:danielberenberg@gmail.com">danielberenberg@gmail.com</a>. 
-              <br> Please find my resume <a href="assets/daniel-berenberg-resume.pdf">here</a>.</p>
+              <p>I am currently living in Burlington, VT. I can be contacted by e-mail at 
+              <a href="mailto:danielberenberg@gmail.com">danielberenberg@gmail.com</a>.
+              </p>
           </div>
         </div>
       </div>
@@ -268,31 +370,37 @@
                 <div class="row" style="padding-bottom: 2px solid rgba(1,1,1,0.2);">
                     <div class="col-md-6">
                         <h3>Publications</h3>
-                        <ol reversed>
-                            <li><p><a href="https://arxiv.org/abs/1812.06038">Inferring the size of the causal universe: features and fusion of causal attribution</a><br/>
+                        <ul>
+                            <li><p><a href="https://arxiv.org/abs/1812.06038">
+                                Inferring the size of the causal universe: features and fusion of causal attribution</a>
+                                <br/>
                             D. Berenberg and J.P. Bagrow, Preprint (2018)</li>
-                            <li><p><a href="https://arxiv.org/abs/1810.03163">Efficient Crowd Exploration of Large Networks: The Cause of Causal Attribution</a><br/>
+                            <li><p><a href="https://arxiv.org/abs/1810.03163">
+                                Efficient Crowd Exploration of Large Networks: The Cause of Causal Attribution</a>
+                                <br/>
                             D. Berenberg and J.P. Bagrow, In <i>Proc. ACM Hum.-Comput. Interact. (CSCW'18)</i>(2018)</p>
                                 <ul>
-                                    <li>Honorable mention for best paper!</li>
+                                    <li>Honorable mention for best paper</li>
                                 </ul>
                             </li>
-                            <li><p><a href="https://arxiv.org/abs/1805.06879">Neural language representations predict outcomes of scientific research</a><br/>
+                            <li><p><a href="https://arxiv.org/abs/1805.06879">
+                                Neural language representations predict outcomes of scientific research</a>
+                                <br/>
                                 J.P. Bagrow, D. Berenberg, J. Bongard, Preprint (2018)
                             </p></li>
-                        </ol>
+                        </ul>
                     </div>
                     <div class="col-md-6">
                         <h3>Affiliations</h3>
                         <ul>
                             <li>
-                                <a href="https://www.uvm.edu/vacc">Vermont Advanced Computing Core </a>
+                            <a href="https://www.uvm.edu/vacc">Vermont Advanced Computing Core </a>
                             </li>
                             <li>
-                                <a href="http://vermontcomplexsystems.org/">Vermont Complex Systems Center</a>
+                            <a href="http://vermontcomplexsystems.org/">Vermont Complex Systems Center</a>
                             </li>
                             <li>
-                                <a href="https://www.uvm.edu/">University of Vermont</a>
+                            <a href="https://www.uvm.edu/">University of Vermont</a>
                             </li>
                         </ul> 
                     </div>
@@ -306,7 +414,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Dan Berenberg 2018</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Daniel Berenberg 2019</p>
       </div>
       <!-- /.container -->
     </footer>
